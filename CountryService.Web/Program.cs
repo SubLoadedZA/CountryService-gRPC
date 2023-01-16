@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc(options =>
 {
+    options.EnableDetailedErrors = true; // Enabling error details
     options.MaxReceiveMessageSize = 6291456; // 6 MB
     options.MaxSendMessageSize = 6291456; // 6 MB
 });
